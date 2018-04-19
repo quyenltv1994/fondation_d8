@@ -1,0 +1,15 @@
+.complex-page-intro{
+  background: $white;
+  padding: 0 0 50px;
+  .container{
+    @media screen and (min-width: $tablet-medium){
+      padding-left:58px;
+    }
+    @media screen and (min-width: $desktop-medium){
+      padding-left: 15px;
+    }
+  }
+  .field-name-body{
+    max-width: 750px;
+  }
+}

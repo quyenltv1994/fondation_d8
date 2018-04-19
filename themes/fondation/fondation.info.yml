@@ -1,0 +1,12 @@
+name: 'Fondation'
+type: theme
+core: 8.x
+base theme: classy
+libraries:
+  - fondation/global-style
+regions:
+  header_left: '[Header] Site Brand'
+  header_right_top: '[Header] Header Right Top'
+  header_right_bottom: '[Header] Header Right Bottom'
+  content: Content
+  footer: Footer
