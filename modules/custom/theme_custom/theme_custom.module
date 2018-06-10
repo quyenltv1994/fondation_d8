@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * preprocess page
+ */
+function theme_custom_preprocess_html(&$vars) {
+    // $is_front = ;
+    $current_path = \Drupal::service('path.current')->getPath();
+    if(\Drupal::service('path.matcher')->isFrontPage()) {
+        $vars['attributes']['class'] = 'page-home';
+    } elseif ($current_path=='/webform/schedule_visit') {
+        $vars['attributes']['class'] = 'page-booking-visite';
+    } elseif ($current_path=='/agents') {
+        $vars['attributes']['class'] = 'recherche-agent';
+    } else {
+        // for node bundle
+        $node = \Drupal::routeMatch()->getParameter('node');
+        if ($node instanceof \Drupal\node\NodeInterface) {
+            $type = $node->bundle();
+            if ($type == 'agent_partner') {
+                $vars['attributes']['class'] = 'page-agent';
+            } elseif ($type=='bien_location' || $type=='bien_vente') {
+                $vars['attributes']['class'][] = 'page-detail-annonce';
+                if (\Drupal::request()->get('utype')=='vendor') {
+                    $vars['attributes']['class'][] = ' page-vendeur';
+                }
+            } elseif ($type=='article') {
+                $vars['attributes']['class'] = 'page-detail-actu';
+            }
+        }
+    }
+}
+
+function theme_custom_theme_suggestions_menu_alter(array &$suggestions, array $variables){
+    if($variables['menu_name'] == 'plan-du-site' || $variables['menu_name'] == 'autres-sites-du-groupe' || $variables['menu_name'] == 'en-savoir-plus'){
+        $suggestions[] = "menu_footer_top";
+    }
+}
+
+function theme_custom_theme_suggestions_block_alter(array &$suggestions, array $variables){
+    if($variables['elements']['#id'] == 'plandusite_2' || $variables['elements']['#id'] == 'autressitesdugroupe' || $variables['elements']['#id'] == 'ensavoirplus_2'){
+        $suggestions[] = "block__menu_footer_top";
+    }
+}
+

@@ -1,12 +1,12 @@
-name: 'Fondation'
-type: theme
+name: "Fondation Theme"
+description: "Fondation Theme"
 core: 8.x
-base theme: classy
+type: theme
 libraries:
-  - fondation/global-style
+  - fondation/fondation.style
 regions:
-  header_left: '[Header] Site Brand'
-  header_right_top: '[Header] Header Right Top'
-  header_right_bottom: '[Header] Header Right Bottom'
+  header_right_top: "[Header Right Top]"
+  header_right_bottom: "[Header Right Bottom]"
   content: Content
-  footer: Footer
+  footer: "[Footer]"
+  siderBar: "[Sidebar]"

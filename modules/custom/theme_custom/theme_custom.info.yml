@@ -1,0 +1,5 @@
+name: "Fondation Custom"
+description: "This is a module test"
+core: 8.x
+type: module
+package: "[OWN]"

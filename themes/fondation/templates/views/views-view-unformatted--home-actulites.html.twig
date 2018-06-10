@@ -1,0 +1,62 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+<div class="actua__home">
+    <div class="wrapper">
+        <div class="actua__home--main">
+            <h2 class="title">
+                {% if title %}
+                   {{ title }}
+                {% endif %}
+                <a href="" class="read__more">Toutes les actualités</a>
+            </h2>
+            <div class="actua__home--content">
+                {% for row in rows %}
+                    {%
+                    set row_classes = [
+                    default_row_class ? 'views-row',
+                    ]
+                    %}
+                    <div class="actua__home_item">
+                        <div class="image">
+                            <img src="{{ file_url(row.content["#row"]._entity.field_image[0].entity.uri.value|image_style('home_actulites')) }}" alt="">
+                        </div>
+                        <div class="actua_content">
+                            <p class="date">Mardi 5 décembre 2017</p>
+                            <p class="actua_title">{{ row.content["#row"]._entity.title.value  }}</p>
+                            <div class="content">
+                                {{ row.content["#row"]._entity.body.value | slice(0, 50) ~ '...' | raw  }}
+                            </div>
+                            <p><a href="{{ path('entity.node.canonical', {'node': row.content["#row"]._entity.nid.value}) }}" class="read__more">en savoir plus</a></p>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</div>
+{% for row in rows %}
+    {%
+    set row_classes = [
+    default_row_class ? 'views-row',
+    ]
+    %}
+    <div{{ row.attributes.addClass(row_classes) }}>
+        {{ row.content }}
+    </div>
+{% endfor %}
