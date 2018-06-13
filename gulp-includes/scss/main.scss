@@ -1,0 +1,67 @@
+@import 'global/fontello';
+//Main sass config files
+@import "global/variables";
+
+@import "global/mixins";
+//@import '../nodemodules/slick-carousel/slick/slick.scss';
+//@import '../nodemodules/slick-carousel/slick/slick.css';
+@import '../../nodemodules/animate.scss/vendor/assets/stylesheets/animate';
+@import '../../nodemodules/animate.scss/vendor/assets/stylesheets/animate/fadeIn';
+@import '../../nodemodules/animate.scss/vendor/assets/stylesheets/animate/fadeInLeft';
+@import '../../nodemodules/animate.scss/vendor/assets/stylesheets/animate/fadeInRight';
+@import '../../nodemodules/animate.scss/vendor/assets/stylesheets/animate/fadeInDown';
+@import '../../nodemodules/animate.scss/vendor/assets/stylesheets/animate/slideInDown';
+@import '../../nodemodules/wowjs/css/libs/animate';
+//@import '../../nodemodules/owl.carousel/src/scss/owl.carousel';
+//@import '../../nodemodules/owl.carousel/src/scss/owl.theme.default';
+@import '../../nodemodules/owl.carousel/dist/assets/owl.carousel';
+@import '../../nodemodules/owl.carousel/dist/assets/owl.theme.default';
+@import '../../nodemodules/flexslider/flexslider';
+@import '../../nodemodules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar';
+@import '../../nodemodules/@fancyapps/fancybox/dist/jquery.fancybox.min';
+@import 'helpers/sumoselect';
+@import 'helpers/awesome-bootstrap-checkbox';
+
+//Main websites components
+@import "global/buttons";
+@import "global/form";
+@import "global/text";
+@import "global/utility";
+
+//Main websites templates
+@import "templates/fancybox";
+@import "templates/font";
+@import "templates/anim";
+@import "templates/breadcrumb";
+@import "templates/article";
+@import "templates/footer";
+@import "templates/global";
+@import "templates/header";
+@import "templates/layout";
+@import "templates/menus";
+@import "templates/banner";
+@import "templates/socials";
+@import "templates/actuahome";
+@import "templates/projecthome";
+@import "templates/unprojecthome";
+@import "templates/pressehome";
+@import "templates/brefhome";
+@import "templates/complexpageintro";
+@import "templates/video";
+@import "templates/governance";
+@import "templates/keyfigures";
+@import "templates/activities";
+@import "templates/alliiances";
+@import "templates/awards";
+@import "templates/sage";
+@import "templates/social";
+@import "templates/presse";
+@import "templates/listactua";
+@import "templates/pagenotfound";
+@import "templates/pager";
+@import "templates/sitecontent";
+@import "templates/detailactua";
+@import "templates/search";
+@import "templates/projectpage";
+@import "templates/loginpage";
+@import "templates/emploi";

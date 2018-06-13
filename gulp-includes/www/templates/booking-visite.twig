@@ -1,0 +1,309 @@
+{#
+/**
+ * @file
+ *
+ * Available variables
+ * - project_name
+ * - css_files
+ * - css_url
+ * - js_url
+ * - favicon_url
+ * - img_url
+ * - lang_code
+ * - favicon_color
+ *
+ */
+#}
+
+{% set bodyclass = 'page-booking-visite' %}
+{# toolbar-fixed#}
+{% include '../header.twig' with bodyclass %}
+
+<div class="clearfix wrapper-fullwidth">
+    <div class="content-main-title">
+        <div class="wrapper">
+            <div class="main-title">
+                <h2 class="title">Programmez votre visite</h2>
+                <div class="des">Choisissez la date et l’heure puis remplissez le formulaire</div>
+                <a href="" class="btn btn-back"><i class="icon-arrow-left"></i>Retour</a>
+            </div>
+
+        </div>
+    </div>
+    <div class="content-booking">
+        <div class="wrapper">
+            <div class="booking-row">
+                <div class="booking-row-left">
+                    <div class="booking-day">
+
+                        <div class="booking-slide">
+                            <div class="slideday owl-carousel owl-theme">
+                                <div class="itemday">
+                                    <div class="itemday__inner">
+                                        <div class="daytop">Mer</div>
+                                        <div class="daymiddle">13</div>
+                                        <div class="daybottom">Déc.</div>
+                                    </div>
+
+                                </div>
+                                <div class="itemday">
+                                    <div class="itemday__inner">
+                                        <div class="daytop">Jeu</div>
+                                        <div class="daymiddle">14</div>
+                                        <div class="daybottom">Déc.</div>
+                                    </div>
+
+                                </div>
+                                <div class="itemday">
+                                    <div class="itemday__inner">
+                                        <div class="daytop">Ven</div>
+                                        <div class="daymiddle">15</div>
+                                        <div class="daybottom">Déc.</div>
+                                    </div>
+
+                                </div>
+                                <div class="itemday">
+                                    <div class="itemday__inner">
+                                        <div class="daytop">Sam</div>
+                                        <div class="daymiddle">16</div>
+                                        <div class="daybottom">Déc.</div>
+                                    </div>
+
+                                </div>
+                                <div class="itemday">
+                                    <div class="itemday__inner">
+                                        <div class="daytop">Dim</div>
+                                        <div class="daymiddle">17</div>
+                                        <div class="daybottom">Déc.</div>
+                                    </div>
+
+                                </div>
+                                <div class="itemday">
+                                    <div class="itemday__inner">
+                                        <div class="daytop">Lun</div>
+                                        <div class="daymiddle">18</div>
+                                        <div class="daybottom">Déc.</div>
+                                    </div>
+
+                                </div>
+                                <div class="itemday">
+                                    <div class="itemday__inner">
+                                        <div class="daytop">Lun</div>
+                                        <div class="daymiddle">19</div>
+                                        <div class="daybottom">Déc.</div>
+                                    </div>
+
+                                </div>
+                                <div class="itemday">
+                                    <div class="itemday__inner">
+                                        <div class="daytop">Lun</div>
+                                        <div class="daymiddle">20</div>
+                                        <div class="daybottom">Déc.</div>
+                                    </div>
+
+                                </div>
+                                <div class="itemday">
+                                    <div class="itemday__inner">
+                                        <div class="daytop">Lun</div>
+                                        <div class="daymiddle">21</div>
+                                        <div class="daybottom">Déc.</div>
+                                    </div>
+
+                                </div>
+                                <div class="itemday">
+                                    <div class="itemday__inner">
+                                        <div class="daytop">Lun</div>
+                                        <div class="daymiddle">22</div>
+                                        <div class="daybottom">Déc.</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="booking-day">
+                        <div class="booking-slide">
+                            <div class="slidehours owl-carousel owl-theme">
+                                <div class="itemhour">
+                                    <div class="itemhour__inner">
+                                        <div class="hour">10h00</div>
+                                    </div>
+                                </div>
+                                <div class="itemhour">
+                                    <div class="itemhour__inner">
+                                        <div class="hour">10h30</div>
+                                    </div>
+                                </div>
+                                <div class="itemhour">
+                                    <div class="itemhour__inner">
+                                        <div class="hour">11h00</div>
+                                    </div>
+                                </div>
+                                <div class="itemhour">
+                                    <div class="itemhour__inner">
+                                        <div class="hour">11h30</div>
+                                    </div>
+                                </div>
+                                <div class="itemhour">
+                                    <div class="itemhour__inner">
+                                        <div class="hour">12h00</div>
+                                    </div>
+                                </div>
+                                <div class="itemhour">
+                                    <div class="itemhour__inner">
+                                        <div class="hour">12h30</div>
+                                    </div>
+                                </div>
+                                <div class="itemhour">
+                                    <div class="itemhour__inner">
+                                        <div class="hour">13h00</div>
+                                    </div>
+                                </div>
+                                <div class="itemhour">
+                                    <div class="itemhour__inner">
+                                        <div class="hour">13h30</div>
+                                    </div>
+                                </div>
+                                <div class="itemhour">
+                                    <div class="itemhour__inner">
+                                        <div class="hour">14h00</div>
+                                    </div>
+                                </div>
+                                <div class="itemhour">
+                                    <div class="itemhour__inner">
+                                        <div class="hour">14h30</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vos-coordonnees">
+                        <form>
+                            <div class="form">
+                                <h3 class="title">Vos coordonnées</h3>
+                                <div class="inner">
+                                    <div class="form__col">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="" placeholder="Pierrick">
+                                        </div>
+                                    </div>
+                                    <div class="form__col">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="" placeholder="Nom *">
+                                        </div>
+                                    </div>
+                                    <div class="form__col">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" id="" placeholder="Email *">
+                                        </div>
+                                    </div>
+                                    <div class="form__col">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="" placeholder="Téléphone">
+                                        </div>
+                                    </div>
+                                    <div class="form__col__full">
+                                        <div class="label-radio">Faites-vous actuellement appel à un agent immobilier pour vous aider à trouver votre bien ?</div>
+                                        <div class="group-radio">
+                                            <div class="form-check abc-radio form-check-inline">
+                                                <input class="form-check-input" type="radio" name="radio1" id="radio1" value="option1" checked>
+                                                <label class="form-check-label" for="radio1">
+                                                    Oui
+                                                </label>
+                                            </div>
+                                            <div class="form-check abc-radio form-check-inline">
+                                                <input class="form-check-input" type="radio" name="radio1" id="radio2" value="option2">
+                                                <label class="form-check-label" for="radio2">
+                                                    Non
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="form__col__full">
+                                        <div class="form-group">
+                                            <textarea class="form-control" id="Message" rows="7" placeholder="Souhaitez-vous ajouter quelque chose à propos de la visite ou sur votre recherche de bien ?"></textarea>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="group-btn">
+                        <div class="champs">* Champs obligatoires</div>
+                        <button class="btn btn-envoyer">Je confirme ma demande de visite</button>
+                    </div>
+                </div>
+                <div class="booking-row-right">
+                    <div class="info-booking">
+                        <div class="info-booking__top">
+                            <a href="" class="link-over"></a>
+                            <div class="image">
+                                <img src="{{ img_url }}img-booking.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="price">
+                                    <span>702 000 €</span>  (7 201 €/m2)
+                                </div>
+                                <div class="short-des">Appartement • Paris, 75020 • Cambronne
+                                    3 pièces • 70 m2</div>
+                            </div>
+                        </div>
+                        <div class="info-booking__bottom">
+                            <div class="info-person">
+                                <div class="image">
+                                    <img src="{{ img_url }}avatar.jpg" alt="">
+                                </div>
+                                <div class="des-right">
+                                    <div class="publie">Publié par un <span>partenaire EZI-X</span></div>
+                                    <div class="name">Farah Falconi</div>
+                                    <div class="price-vote">
+                                        <div class="price">4,56</div>
+                                        {#<div class="vote">#}
+                                            {#<div class="star"><i class="icon-star"></i></div>#}
+                                            {#<div class="star"><i class="icon-star"></i></div>#}
+                                            {#<div class="star"><i class="icon-star"></i></div>#}
+                                            {#<div class="star"><i class="icon-star"></i></div>#}
+                                            {#<div class="star"><i class="icon-star"></i></div>#}
+                                        {#</div>#}
+                                        <div class="vote">
+                                            <div class="star StarRating">
+                                                <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                                <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                                <div class="starHalfSvg"><svg class="SvgIcon rfSvg rating-half"><svg viewBox="0 0 24 24"><path class="rating-half-Right Right" fill-rule="evenodd" clip-rule="evenodd" d="M12 19.46l6.968 3.663a.25.25 0 0 0 .363-.264L18 15.1l5.637-5.495a.25.25 0 0 0-.138-.426l-7.791-1.132L12.224.988a.246.246 0 0 0-.223-.139L12 19.46z"></path><path class="rating-half-Left Left" fill-rule="evenodd" clip-rule="evenodd" d="M8.292 8.047L.501 9.179a.25.25 0 0 0-.138.426L6 15.1l-1.331 7.759a.25.25 0 0 0 .363.264L12 19.46 12.001.849a.248.248 0 0 0-.225.139L8.292 8.047"></path></svg></svg></div>
+                                                <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                                <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-person-detail">
+                                <div class="text">Pauline vous conseille afin de présenter une offre compétitive.</div>
+                                <div class="group-tel-btn">
+                                    <div class="group-tel-btn__left">
+                                        <a href="" class="btn btn-email">Par Email</a>
+                                    </div>
+                                    <div class="group-tel-btn_right">
+                                        <a href="" class="number-tel">+33 6 33 17 31 18</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+{% include '../footer.twig' %}

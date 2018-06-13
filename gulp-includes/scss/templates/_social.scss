@@ -1,0 +1,46 @@
+.fixed-menu{
+  background: $white;
+  padding-bottom: 52px;
+  .anchor-menu{
+    display: none;
+  }
+  .wrapper{
+    z-index: 99;
+  }
+  .social-box{
+    .content{
+      background: #abc528;
+      @include display-flex();
+      @include flex-align(center);
+      @include flex-justify(center);
+      border-radius: 0 0 10px 10px;
+      float:right;
+      padding: 7px 23px;
+      margin-right: 36px;
+      span{
+        font-size: 12px;
+        font-family: $font-bold;
+        text-transform: uppercase;
+        color:$white;
+      }
+      ul{
+        li{
+          display: inline-block;
+          .social-icon{
+            background: none;
+            margin:0;
+            font-size: 12px;
+          }
+          .icon-print{
+            font-size: 12px;
+            cursor: pointer;
+            padding-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+.icon-print:before {
+  content: "\e900";
+}

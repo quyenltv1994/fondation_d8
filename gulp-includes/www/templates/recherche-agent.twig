@@ -1,0 +1,266 @@
+{#
+/**
+ * @file
+ *
+ * Available variables
+ * - project_name
+ * - css_files
+ * - css_url
+ * - js_url
+ * - favicon_url
+ * - img_url
+ * - lang_code
+ * - favicon_color
+ *
+ */
+#}
+
+{% set bodyclass = 'recherche-agent' %}
+{% include '../header.twig' with bodyclass %}
+
+<div class="clearfix wrapper-fullwidth">
+    <div class="content-recherche-agent">
+        <div class="content-recherche-agent__tabs">
+            <div class="content-recherche-agent__tab">
+                <a href="#contentlist"><i class="icon-list"></i></a>
+            </div>
+            <div class="content-recherche-agent__tab">
+                <a href="#contentmap"><i class="icon-location"></i></a>
+            </div>
+        </div>
+        <div class="content-recherche-agent__main">
+            <div class="content-recherche-agent__left contenttab" id="contentmap">
+                <div class="map">
+                    <img src="{{ img_url }}map.jpg" alt="">
+                </div>
+            </div>
+            <div class="content-recherche-agent__right contenttab" id="contentlist">
+                <div class="search-title">
+                    <div class="search-title__top">
+                        <div class="title">Vous recherchez un agent immobilier ?</div>
+                        <div class="sum-result">Trouvez un agent sur votre secteur et consultez son profil</div>
+                    </div>
+                    <div class="search-title__bottom">
+                        <div class="input-search-agent">
+                            <input class="input" placeholder="Nom, prénom de l'agent">
+                            <button class="button-search"><i class="icon-search"></i></button>
+                        </div>
+                        <div class="sum-result">
+                            <div class="text"><span>12</span> résultats</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list-search">
+                    <div class="list-search__item">
+                        <div class="list-search__item__left">
+                            <a href="" class="link-over"></a>
+                            <div class="image">
+                                <img src="{{ img_url }}img-recherche-agent.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="list-search__item__right">
+                            <div class="item-top">
+                                <div class="description">
+                                    <div class="name">Pauline Brugère</div>
+                                    <div class="agent">Agent EZI-X</div>
+                                    <div class="tel">+33 6 33 17 31 18</div>
+
+                                </div>
+                                <div class="group-btn">
+                                    <a href="" class="btn btn-detail">Détails</a>
+                                </div>
+                            </div>
+
+                            <div class="item-bottom">
+                                <div class="item-bottom__left">
+                                    <div class="price-vote">
+                                        <div class="price">4,56</div>
+                                        {#<div class="vote">#}
+                                            {#<div class="star"><i class="icon-star"></i></div>#}
+                                            {#<div class="star"><i class="icon-star"></i></div>#}
+                                            {#<div class="star"><i class="icon-star"></i></div>#}
+                                            {#<div class="star"><i class="icon-star"></i></div>#}
+                                            {#<div class="star"><i class="icon-star"></i></div>#}
+                                        {#</div>#}
+                                        <div class="vote">
+                                            <div class="star StarRating">
+                                                <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                                <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                                <div class="starHalfSvg"><svg class="SvgIcon rfSvg rating-half"><svg viewBox="0 0 24 24"><path class="rating-half-Right Right" fill-rule="evenodd" clip-rule="evenodd" d="M12 19.46l6.968 3.663a.25.25 0 0 0 .363-.264L18 15.1l5.637-5.495a.25.25 0 0 0-.138-.426l-7.791-1.132L12.224.988a.246.246 0 0 0-.223-.139L12 19.46z"></path><path class="rating-half-Left Left" fill-rule="evenodd" clip-rule="evenodd" d="M8.292 8.047L.501 9.179a.25.25 0 0 0-.138.426L6 15.1l-1.331 7.759a.25.25 0 0 0 .363.264L12 19.46 12.001.849a.248.248 0 0 0-.225.139L8.292 8.047"></path></svg></svg></div>
+                                                <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                                <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-bottom__left"><span>34</span> avis</div>
+                                <div class="item-bottom__left"><span>26</span> transactions</div>
+                                <div class="item-bottom__left">
+                                    <div class="txt-hono">Honoraires</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-search__item">
+                        <div class="list-search__item__left">
+                            <a href="" class="link-over"></a>
+                            <div class="image">
+                                <img src="{{ img_url }}img-recherche-agent2.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="list-search__item__right">
+                            <div class="item-top">
+                                <div class="description">
+                                    <div class="name">Farah Falconi</div>
+                                    <div class="agent">Agent EZI-X</div>
+                                    <div class="tel">+33 6 33 17 31 18</div>
+
+                                </div>
+                                <div class="group-btn">
+                                    <a href="" class="btn btn-detail">Détails</a>
+                                </div>
+                            </div>
+
+                            <div class="item-bottom">
+                                <div class="item-bottom__left">
+                                    <div class="price-vote">
+                                        <div class="price">4,56</div>
+                                        {#<div class="vote">#}
+                                            {#<div class="star"><i class="icon-star"></i></div>#}
+                                            {#<div class="star"><i class="icon-star"></i></div>#}
+                                            {#<div class="star"><i class="icon-star"></i></div>#}
+                                            {#<div class="star"><i class="icon-star"></i></div>#}
+                                            {#<div class="star"><i class="icon-star"></i></div>#}
+                                        {#</div>#}
+                                        <div class="vote">
+                                            <div class="star StarRating">
+                                                <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                                <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                                <div class="starHalfSvg"><svg class="SvgIcon rfSvg rating-half"><svg viewBox="0 0 24 24"><path class="rating-half-Right Right" fill-rule="evenodd" clip-rule="evenodd" d="M12 19.46l6.968 3.663a.25.25 0 0 0 .363-.264L18 15.1l5.637-5.495a.25.25 0 0 0-.138-.426l-7.791-1.132L12.224.988a.246.246 0 0 0-.223-.139L12 19.46z"></path><path class="rating-half-Left Left" fill-rule="evenodd" clip-rule="evenodd" d="M8.292 8.047L.501 9.179a.25.25 0 0 0-.138.426L6 15.1l-1.331 7.759a.25.25 0 0 0 .363.264L12 19.46 12.001.849a.248.248 0 0 0-.225.139L8.292 8.047"></path></svg></svg></div>
+                                                <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                                <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-bottom__left"><span>34</span> avis</div>
+                                <div class="item-bottom__left"><span>26</span> transactions</div>
+                                <div class="item-bottom__left">
+                                    <div class="txt-hono">Honoraires</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-search__item">
+                        <div class="list-search__item__left">
+                            <a href="" class="link-over"></a>
+                            <div class="image">
+                                <img src="{{ img_url }}img-recherche-agent.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="list-search__item__right">
+                            <div class="item-top">
+                                <div class="description">
+                                    <div class="name">Pauline Brugère</div>
+                                    <div class="agent">Agent EZI-X</div>
+                                    <div class="tel">+33 6 33 17 31 18</div>
+
+                                </div>
+                                <div class="group-btn">
+                                    <a href="" class="btn btn-detail">Détails</a>
+                                </div>
+                            </div>
+
+                            <div class="item-bottom">
+                                <div class="item-bottom__left">
+                                    <div class="price-vote">
+                                        <div class="price">4,56</div>
+                                        {#<div class="vote">#}
+                                            {#<div class="star"><i class="icon-star"></i></div>#}
+                                            {#<div class="star"><i class="icon-star"></i></div>#}
+                                            {#<div class="star"><i class="icon-star"></i></div>#}
+                                            {#<div class="star"><i class="icon-star"></i></div>#}
+                                            {#<div class="star"><i class="icon-star"></i></div>#}
+                                        {#</div>#}
+                                        <div class="vote">
+                                            <div class="star StarRating">
+                                                <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                                <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                                <div class="starHalfSvg"><svg class="SvgIcon rfSvg rating-half"><svg viewBox="0 0 24 24"><path class="rating-half-Right Right" fill-rule="evenodd" clip-rule="evenodd" d="M12 19.46l6.968 3.663a.25.25 0 0 0 .363-.264L18 15.1l5.637-5.495a.25.25 0 0 0-.138-.426l-7.791-1.132L12.224.988a.246.246 0 0 0-.223-.139L12 19.46z"></path><path class="rating-half-Left Left" fill-rule="evenodd" clip-rule="evenodd" d="M8.292 8.047L.501 9.179a.25.25 0 0 0-.138.426L6 15.1l-1.331 7.759a.25.25 0 0 0 .363.264L12 19.46 12.001.849a.248.248 0 0 0-.225.139L8.292 8.047"></path></svg></svg></div>
+                                                <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                                <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-bottom__left"><span>34</span> avis</div>
+                                <div class="item-bottom__left"><span>26</span> transactions</div>
+                                <div class="item-bottom__left">
+                                    <div class="txt-hono">Honoraires</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-search__item">
+                        <div class="list-search__item__left">
+                            <a href="" class="link-over"></a>
+                            <div class="image">
+                                <img src="{{ img_url }}img-recherche-agent2.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="list-search__item__right">
+                            <div class="item-top">
+                                <div class="description">
+                                    <div class="name">Farah Falconi</div>
+                                    <div class="agent">Agent EZI-X</div>
+                                    <div class="tel">+33 6 33 17 31 18</div>
+
+                                </div>
+                                <div class="group-btn">
+                                    <a href="" class="btn btn-detail">Détails</a>
+                                </div>
+                            </div>
+
+                            <div class="item-bottom">
+                                <div class="item-bottom__left">
+                                    <div class="price-vote">
+                                        <div class="price">4,56</div>
+                                        {#<div class="vote">#}
+                                            {#<div class="star"><i class="icon-star"></i></div>#}
+                                            {#<div class="star"><i class="icon-star"></i></div>#}
+                                            {#<div class="star"><i class="icon-star"></i></div>#}
+                                            {#<div class="star"><i class="icon-star"></i></div>#}
+                                            {#<div class="star"><i class="icon-star"></i></div>#}
+                                        {#</div>#}
+                                        <div class="vote">
+                                            <div class="star StarRating">
+                                                <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                                <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                                <div class="starHalfSvg"><svg class="SvgIcon rfSvg rating-half"><svg viewBox="0 0 24 24"><path class="rating-half-Right Right" fill-rule="evenodd" clip-rule="evenodd" d="M12 19.46l6.968 3.663a.25.25 0 0 0 .363-.264L18 15.1l5.637-5.495a.25.25 0 0 0-.138-.426l-7.791-1.132L12.224.988a.246.246 0 0 0-.223-.139L12 19.46z"></path><path class="rating-half-Left Left" fill-rule="evenodd" clip-rule="evenodd" d="M8.292 8.047L.501 9.179a.25.25 0 0 0-.138.426L6 15.1l-1.331 7.759a.25.25 0 0 0 .363.264L12 19.46 12.001.849a.248.248 0 0 0-.225.139L8.292 8.047"></path></svg></svg></div>
+                                                <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                                <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-bottom__left"><span>34</span> avis</div>
+                                <div class="item-bottom__left"><span>26</span> transactions</div>
+                                <div class="item-bottom__left">
+                                    <div class="txt-hono">Honoraires</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {% include '../blocks/paging.twig' %}
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="../js/search.js" charset="UTF-8" defer></script>
+
+{% include '../footer.twig' %}

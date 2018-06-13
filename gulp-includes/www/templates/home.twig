@@ -1,0 +1,379 @@
+{#
+/**
+ * @file
+ *
+ * Available variables
+ * - project_name
+ * - css_files
+ * - css_url
+ * - js_url
+ * - favicon_url
+ * - img_url
+ * - lang_code
+ * - favicon_color
+ *
+ */
+#}
+
+{% set bodyclass = 'page-home' %}
+{% include '../header.twig' with bodyclass %}
+
+<div class="clearfix wrapper-fullwidth">
+    <div class="content-home">
+        <div class="content-home__left">
+            <div class="inner">
+                <div class="content-home__left__top">
+                    <div class="image"><img src="{{ img_url }}banner-home.jpg" alt=""></div>
+                    <div class="description">
+                        <div class="bg-cover">
+                            <div class="title">Exigez plus<br>
+                                de votre agent immobilier</div>
+                            <h1 class="sub-title">Découvrez les annonces des agents les plus recommandés</h1>
+                        </div>
+
+                        <div class="group-btn">
+                            <a href="" class="btn btn-red"><span>Pré-estimation</span> gratuite</a>
+                            <a href="" class="btn btn-green"><span>Soyez le premier</span> à visiter</a>
+                        </div>
+                        {#<div class="search">#}
+                            {#<div class="search__select">#}
+                                {#<select>#}
+                                    {#<option value="0">Achat</option>#}
+                                    {#<option value="1">Achat2</option>#}
+                                    {#<option value="2">Achat3</option>#}
+                                    {#<option value="3">Achat4</option>#}
+                                {#</select>#}
+                            {#</div>#}
+                            {#<div class="search__input">#}
+                                {#<input class="input" placeholder="Ville, quartier, adresse, code postal...">#}
+                                {#<button class="button-search"><i class="icon-search"></i></button>#}
+                            {#</div>#}
+                        {#</div>#}
+                    </div>
+                    <div class="search">
+                        <div class="search__select">
+                            <select>
+                                <option value="0">Achat</option>
+                                <option value="1">Achat2</option>
+                                <option value="2">Achat3</option>
+                                <option value="3">Achat4</option>
+                            </select>
+                        </div>
+                        <div class="search__input">
+                            <input class="input" placeholder="Ville, quartier, adresse, code postal...">
+                            <button class="button-search"><i class="icon-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-home__left__bottom">
+                    <ul>
+                        <li>
+                            <a href=""><i class="icon-rs-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="icon-rs-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="icon-rs-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="icon-rs-linkedin"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="icon-rs-googleplus"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="content-home__right">
+            <div class="lists">
+                <div class="lists__item">
+                    <div class="inner">
+                        <div class="item-top">
+                            <div class="image">
+                                <img src="{{ img_url }}avatar.jpg" alt="">
+                            </div>
+                            <div class="des-right">
+                                <div class="publie">Publié par un <span>AGENT EZI-X</span></div>
+                                <div class="name">Farah Falconi</div>
+                                <div class="price-vote">
+                                    <div class="price">4,56</div>
+                                    {#<div class="vote">#}
+                                        {#<div class="star"><i class="icon-star"></i></div>#}
+                                        {#<div class="star"><i class="icon-star"></i></div>#}
+                                        {#<div class="star"><i class="icon-star"></i></div>#}
+                                        {#<div class="star"><i class="icon-star"></i></div>#}
+                                        {#<div class="star"><i class="icon-star"></i></div>#}
+                                    {#</div>#}
+                                    <div class="vote">
+                                        <div class="star StarRating">
+                                            <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                            <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                            <div class="starHalfSvg"><svg class="SvgIcon rfSvg rating-half"><svg viewBox="0 0 24 24"><path class="rating-half-Right Right" fill-rule="evenodd" clip-rule="evenodd" d="M12 19.46l6.968 3.663a.25.25 0 0 0 .363-.264L18 15.1l5.637-5.495a.25.25 0 0 0-.138-.426l-7.791-1.132L12.224.988a.246.246 0 0 0-.223-.139L12 19.46z"></path><path class="rating-half-Left Left" fill-rule="evenodd" clip-rule="evenodd" d="M8.292 8.047L.501 9.179a.25.25 0 0 0-.138.426L6 15.1l-1.331 7.759a.25.25 0 0 0 .363.264L12 19.46 12.001.849a.248.248 0 0 0-.225.139L8.292 8.047"></path></svg></svg></div>
+                                            <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                            <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-bottom">
+                            <a href="" class="link-over"></a>
+                            <div class="image">
+                                <img src="{{ img_url }}img-home1.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="price">
+                                    <span>702 000 €</span>  (7 201 €/m2)
+                                </div>
+                                <div class="short-des">Appartement • Paris, 75020 • Cambronne<br>
+                                    <em class="placeholder">3</em> pièces • <em class="placeholder">70</em> m2</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="lists__item">
+                    <div class="inner">
+                        <div class="item-top">
+                            <div class="image">
+                                <img src="{{ img_url }}avatar.jpg" alt="">
+                            </div>
+                            <div class="des-right">
+                                <div class="publie">Publié par un <span>AGENT EZI-X</span></div>
+                                <div class="name">Farah Falconi</div>
+                                <div class="price-vote">
+                                    <div class="price">4,56</div>
+                                    {#<div class="vote">#}
+                                        {#<div class="star"><i class="icon-star"></i></div>#}
+                                        {#<div class="star"><i class="icon-star"></i></div>#}
+                                        {#<div class="star"><i class="icon-star"></i></div>#}
+                                        {#<div class="star"><i class="icon-star"></i></div>#}
+                                        {#<div class="star"><i class="icon-star"></i></div>#}
+                                    {#</div>#}
+                                    <div class="vote">
+                                        <div class="star StarRating">
+                                            <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                            <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                            <div class="starHalfSvg"><svg class="SvgIcon rfSvg rating-half"><svg viewBox="0 0 24 24"><path class="rating-half-Right Right" fill-rule="evenodd" clip-rule="evenodd" d="M12 19.46l6.968 3.663a.25.25 0 0 0 .363-.264L18 15.1l5.637-5.495a.25.25 0 0 0-.138-.426l-7.791-1.132L12.224.988a.246.246 0 0 0-.223-.139L12 19.46z"></path><path class="rating-half-Left Left" fill-rule="evenodd" clip-rule="evenodd" d="M8.292 8.047L.501 9.179a.25.25 0 0 0-.138.426L6 15.1l-1.331 7.759a.25.25 0 0 0 .363.264L12 19.46 12.001.849a.248.248 0 0 0-.225.139L8.292 8.047"></path></svg></svg></div>
+                                            <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                            <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-bottom">
+                            <a href="" class="link-over"></a>
+                            <div class="image">
+                                <img src="{{ img_url }}img-home2.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="price">
+                                    <span>702 000 €</span>  (7 201 €/m2)
+                                </div>
+                                <div class="short-des">Appartement • Paris, 75020 • Cambronne
+                                    <em class="placeholder">3</em> pièces • <em class="placeholder">70</em> m2</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="lists__item">
+                    <div class="inner">
+                        <div class="item-top">
+                            <div class="image">
+                                <img src="{{ img_url }}avatar.jpg" alt="">
+                            </div>
+                            <div class="des-right">
+                                <div class="publie">Publié par un <span>AGENT EZI-X</span></div>
+                                <div class="name">Farah Falconi</div>
+                                <div class="price-vote">
+                                    <div class="price">4,56</div>
+                                    {#<div class="vote">#}
+                                        {#<div class="star"><i class="icon-star"></i></div>#}
+                                        {#<div class="star"><i class="icon-star"></i></div>#}
+                                        {#<div class="star"><i class="icon-star"></i></div>#}
+                                        {#<div class="star"><i class="icon-star"></i></div>#}
+                                        {#<div class="star"><i class="icon-star"></i></div>#}
+                                    {#</div>#}
+                                    <div class="vote">
+                                        <div class="star StarRating">
+                                            <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                            <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                            <div class="starHalfSvg"><svg class="SvgIcon rfSvg rating-half"><svg viewBox="0 0 24 24"><path class="rating-half-Right Right" fill-rule="evenodd" clip-rule="evenodd" d="M12 19.46l6.968 3.663a.25.25 0 0 0 .363-.264L18 15.1l5.637-5.495a.25.25 0 0 0-.138-.426l-7.791-1.132L12.224.988a.246.246 0 0 0-.223-.139L12 19.46z"></path><path class="rating-half-Left Left" fill-rule="evenodd" clip-rule="evenodd" d="M8.292 8.047L.501 9.179a.25.25 0 0 0-.138.426L6 15.1l-1.331 7.759a.25.25 0 0 0 .363.264L12 19.46 12.001.849a.248.248 0 0 0-.225.139L8.292 8.047"></path></svg></svg></div>
+                                            <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                            <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-bottom">
+                            <a href="" class="link-over"></a>
+                            <div class="image">
+                                <img src="{{ img_url }}img-home3.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="price">
+                                    <span>702 000 €</span>  (7 201 €/m2)
+                                </div>
+                                <div class="short-des">Appartement • Paris, 75020 • Cambronne
+                                    <em class="placeholder">3</em> pièces • <em class="placeholder">70</em> m2</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="lists__item">
+                    <div class="inner">
+                        <div class="item-top">
+                            <div class="image">
+                                <img src="{{ img_url }}avatar.jpg" alt="">
+                            </div>
+                            <div class="des-right">
+                                <div class="publie">Publié par un <span>AGENT EZI-X</span></div>
+                                <div class="name">Farah Falconi</div>
+                                <div class="price-vote">
+                                    <div class="price">4,56</div>
+                                    {#<div class="vote">#}
+                                        {#<div class="star"><i class="icon-star"></i></div>#}
+                                        {#<div class="star"><i class="icon-star"></i></div>#}
+                                        {#<div class="star"><i class="icon-star"></i></div>#}
+                                        {#<div class="star"><i class="icon-star"></i></div>#}
+                                        {#<div class="star"><i class="icon-star"></i></div>#}
+                                    {#</div>#}
+                                    <div class="vote">
+                                        <div class="star StarRating">
+                                            <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                            <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                            <div class="starHalfSvg"><svg class="SvgIcon rfSvg rating-half"><svg viewBox="0 0 24 24"><path class="rating-half-Right Right" fill-rule="evenodd" clip-rule="evenodd" d="M12 19.46l6.968 3.663a.25.25 0 0 0 .363-.264L18 15.1l5.637-5.495a.25.25 0 0 0-.138-.426l-7.791-1.132L12.224.988a.246.246 0 0 0-.223-.139L12 19.46z"></path><path class="rating-half-Left Left" fill-rule="evenodd" clip-rule="evenodd" d="M8.292 8.047L.501 9.179a.25.25 0 0 0-.138.426L6 15.1l-1.331 7.759a.25.25 0 0 0 .363.264L12 19.46 12.001.849a.248.248 0 0 0-.225.139L8.292 8.047"></path></svg></svg></div>
+                                            <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                            <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-bottom">
+                            <a href="" class="link-over"></a>
+                            <div class="image">
+                                <img src="{{ img_url }}img-home4.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="price">
+                                    <span>702 000 €</span>  (7 201 €/m2)
+                                </div>
+                                <div class="short-des">Appartement • Paris, 75020 • Cambronne
+                                    <em class="placeholder">3</em> pièces • <em class="placeholder">70</em> m2</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="list-blocks">
+                <div class="block block-marketing">
+                    <div class="inner">
+                        <div class="dash">
+                            {#<img src="{{ img_url }}animation/dash-line1.png" alt="">#}
+                        </div>
+                        <div class="picto wow fadeIn"><img src="{{ img_url }}animation/1_marketing_1x.gif" alt=""></div>
+                        <div class="title wow fadeInRight" data-wow-duration="1s" data-wow-delay="1s">Marketing</div>
+                        <div class="subtext wow fadeInRight" data-wow-duration="1s" data-wow-delay="1.5s">Photos HD / Visite virtuelle Matterport<br>
+                            Multidiffusion d'annonces / Réseaux sociaux</div>
+                    </div>
+                </div>
+                <div class="block block-estimation-negociation">
+                    <div class="inner">
+                        <div class="dash">
+                            {#<img src="{{ img_url }}animation/dash-line2.png" alt="">#}
+                        </div>
+                        <div class="picto wow fadeIn"><img src="{{ img_url }}animation/2_estimation_1x.gif" alt=""></div>
+                        <div class="title wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">Estimation & Négociation</div>
+                        <div class="subtext wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1.5s">Constitution du dossier de vente / Prise en <br>charge des visites / Qualification des acquéreurs <br>/ Transmission et négociation des offres</div>
+                    </div>
+                </div>
+                <div class="block block-coordination-vente">
+                    <div class="inner">
+                        <div class="dash">
+                            {#<img src="{{ img_url }}animation/dash-line1.png" alt="">#}
+                        </div>
+                        <div class="picto wow fadeIn"><img src="{{ img_url }}animation/3_coordination_1x.gif" alt=""></div>
+                        <div class="title wow fadeInRight" data-wow-duration="1s" data-wow-delay="1s">Coordination de la vente</div>
+                        <div class="subtext wow fadeInRight" data-wow-duration="1s" data-wow-delay="1.5s">Prise de contact avec le notaire/ <br>Transmission du dossier de vente / Suivi de <br>l’établissement du compromis / Suivi de la <br>signature de l’acte authentique</div>
+                    </div>
+                </div>
+                <div class="block block-mise-relation">
+                    <div class="inner">
+                        <div class="dash">
+                            {#<img src="{{ img_url }}animation/dash-line2.png" alt="">#}
+                        </div>
+                        <div class="picto wow fadeIn"><img src="{{ img_url }}animation/4_relation_1x.gif" alt=""></div>
+                        <div class="title wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">Mise en relation</div>
+                        <div class="subtext wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1.5s">Diagnostiqueurs / Déménageurs / <br>Courtiers / Artisants</div>
+                    </div>
+                </div>
+                <div class="block lastdash">
+                    <div class="inner">
+                        <div class="dash">
+                            {#<img src="{{ img_url }}animation/dash-line1.png" alt="">#}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="commissions">
+                <h2 class="title">Commissions fixes</h2>
+                <div class="des">Seulement en cas de vente et à la charge de l'acquéreur</div>
+                <div class="commissions-table">
+                    <div class="commissions-item">
+                        <div class="commissions-item__left">Jusqu'à 499 000 €</div>
+                        <div class="commissions-item__right">5 000 €</div>
+                    </div>
+                    <div class="commissions-item">
+                        <div class="commissions-item__left">500 000 € - 999 000€</div>
+                        <div class="commissions-item__right">10 000 €</div>
+                    </div>
+                    <div class="commissions-item">
+                        <div class="commissions-item__left">1 million d'€ - 2 millions d’€</div>
+                        <div class="commissions-item__right">20 000 €</div>
+                    </div>
+                    <div class="commissions-item">
+                        <div class="commissions-item__left">Au-delà de 2 millions d'€</div>
+                        <div class="commissions-item__right">Nous contacter</div>
+                    </div>
+                </div>
+
+                <div class="commissions-bottom">Les commissions indiquées sont celles pratiquées par les agents EZI-X.
+                    Nos partenaires sont libres d'appliquer leurs propres barèmes de commissions
+                    et s'engagent à satisfaire aux standards qualitatifs établis par EZI-X</div>
+            </div>
+
+            <div class="carte">
+                <h2 class="title">Trouvez votre agent immobilier</h2>
+                <div class="des">Les agents immobiliers qui ont fait de la satisfaction client leur priorité sont sur EZI-X</div>
+                <div class="star">
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                </div>
+
+                <div class="map-home">
+                    <div class="search-on-map">
+                        <div class="search-on-map__input">
+                            <input class="input" placeholder="Rechercher un agent">
+                            <button class="button-search"><i class="icon-search"></i></button>
+                        </div>
+                    </div>
+                    <img src="{{ img_url }}img-map-home.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% include '../footer.twig' %}

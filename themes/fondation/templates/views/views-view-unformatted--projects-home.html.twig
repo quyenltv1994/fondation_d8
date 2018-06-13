@@ -1,0 +1,47 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+<div class="project__home">
+    <div class="wrapper">
+        <h2 class="title">
+            {{ view.getTitle() }}<a href="" class="read__more">{{ "Tous les projets"|t }}</a>
+        </h2>
+        <div class="project__home--main">
+            {% for row in rows %}
+            {%
+            set row_classes = [
+            default_row_class ? 'views-row',
+            ]
+            %}
+            <div class="project__home--item">
+                <div class="image">
+                    <img src="{{ file_url(row.content['#row']._entity.field_image[0].entity.uri.value) }}" alt="">
+                </div>
+                <div class="project__home--item--main">
+                    <div class="project__home--item--content paroller">
+                        <p class="project_title"><a href="{{ path("entity.node.canonical", {'node': row.content['#row']._entity.nid.value}) }}">{{ row.content['#row']._entity.title.value }}</a></p>
+                        <div class="content">
+                            {{ row.content['#row']._entity.body.value|slice(0, 200)|raw }}
+                        </div>
+                        <p><a href="{{ path('entity.node.canonical', {'node': row.content['#row']._entity.nid.value}) }}" class="read__more">en savoir plus sur le projet</a></p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
