@@ -1,0 +1,82 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+{% if title %}
+    <h3>{{ title }}</h3>
+{% endif %}
+{% for row in rows %}
+    {%
+    set row_classes = [
+    default_row_class ? 'views-row',
+    ]
+    %}
+    <div{{ row.attributes.addClass(row_classes) }}>
+        {{ row.content }}
+    </div>
+{% endfor %}
+<div class="activities light-gray-bck">
+    <div class="activities-content complex-content wrapper maxsize">
+        <div class="container">
+            <div class="sidebar">
+                <div class="sidebar-container">
+                    <h2></h2>
+                    <div class="description">
+
+                    </div>
+                    <ul class="group-names tabs vertical" id="activities-lists">
+                        {% for row in rows %}
+                            <li class="tabs-title">
+                                <a href="#activities-group-node-{{ row.content["#row"]._entity.nid.value }}" class="tab-button dont-scroll read__more">
+                                  <span class="content">
+                                    <span class="icon"></span>
+                                    <span class="title">
+                                      {{ row.content["#row"]._entity.title.value }}
+                                    </span>
+                                  </span>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div data-tabs-content="activities-lists" class="tabs-content vertical">
+                <div class="tabs-container">
+                    {% for row in rows %}
+                        <div class="tabs-panel activities-list is-active" id="activities-group-node-{{ row.content["#row"]._entity.nid.value }}">
+                            <div class="activity-body tab-item-body">
+                                <div class="tab-item-image activity-image">
+                                    <img src="{{ file_url(row.content['#row']._entity.field_image[0].entity.uri.value) }}" alt="">
+                                </div>
+                                <div class="content">
+                                    <div class="activity-name tab-item-name">
+                                        {{ row.content["#row"]._entity.title.value }}
+                                    </div>
+                                    <div class="description">
+                                        {{ row.content["#row"]._entity.body.value|raw }}
+                                    </div>
+                                    <a data-open="popin--node-{{ row.content["#row"]._entity.nid.value }}" class="popup-box read__more" data-box="activities-modal">En savoir plus</a>
+                                    <div class="reveal-overlay" id="popin--node-{{ row.content["#row"]._entity.nid.value }}"></div>
+
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
